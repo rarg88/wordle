@@ -11294,8 +11294,13 @@ body {
   background-color: #121213;
 }
 
+.disable-dbl-tap-zoom {
+  touch-action: manipulation;
+}
+
 .game-container {
   height: 90vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

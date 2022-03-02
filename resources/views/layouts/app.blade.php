@@ -24,7 +24,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div id="app">
+    <div id="app" class="disable-dbl-tap-zoom">
         <main class="py-1">
             @yield('content')
         </main>
