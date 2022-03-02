@@ -16,9 +16,9 @@ class WordleController extends Controller
      */
     public function wordle()
     {
-      $wordle = Wordle::select('wordle')->where('start', '<=', date('Y-m-d H:i:s'))->where('end', '>', date('Y-m-d H:i:s'))->first();
-      if(!$wordle){
-        $wordle = Worlde::first();
+      $wordle = Wordle::select('wordle')->where('start', '<=', date('Y-m-d H:i:s'))->where('end', '>', date('Y-m-d H:i:s'))->where('publish', 1)->first();
+      if(is_null($wordle)){
+        $wordle = Wordle::where('publish', 1)->first();
       }
 
       return response()->json([

@@ -114,11 +114,13 @@ const addLetter = (letter) => {
 }
 
 const deleteLetter = () => {
-  currentTile--;
-  const tile = document.getElementById('guessRow-' + currentRow + '-tile-' + currentTile);
-  tile.textContent = '';
-  tile.setAttribute('data', '');
-  guessRows[currentRow][currentTile] = '';
+  if (currentTile != 0) {
+    currentTile--;
+    const tile = document.getElementById('guessRow-' + currentRow + '-tile-' + currentTile);
+    tile.textContent = '';
+    tile.setAttribute('data', '');
+    guessRows[currentRow][currentTile] = '';
+  }
 }
 
 const checkRow = () => {
@@ -164,6 +166,7 @@ const addColorToKey = (keyLetter, color) => {
   key.classList.add(color);
 }
 
+
 const flipTile = () => {
   const rowTiles = document.querySelector('#guessRow-' + currentRow).childNodes;
   let checkWordle = wordle;
@@ -181,8 +184,8 @@ const flipTile = () => {
     }
   });
 
-  guess.forEach((guess) => {
-    if (checkWordle.includes(guess.letter)) {
+  guess.forEach((guess, index) => {
+    if (checkWordle.includes(guess.letter) && guess.letter != wordle[index]) {
       guess.color = 'yellow-overlay';
       checkWordle = checkWordle.replace(guess.letter, '');
     }
