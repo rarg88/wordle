@@ -20,7 +20,7 @@ body {
 }
 
 .game-container {
-  height: 90vh;
+  height: 80vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -78,14 +78,19 @@ body {
 }
 
 .message-container {
-  height: 30px;
+  min-height: 30px;
+  width: 100%;
+  z-index: 9999;
 }
 
 .message-container p {
-  background-color: #818384;
-  border-radius: 10px;
+  background-color: #ffffff;
   padding: 10px;
   margin: 0;
+  width:100%;
+  color: #1e1e1e;
+  z-index: 9999;
+  text-align: center;
 }
 
 .tile.flip{
@@ -170,7 +175,7 @@ body {
   
   .key-container button {
     width: 33px;
-    height: 58px;
+    height: 45px;
     margin: 2px;
   }
   
@@ -183,8 +188,8 @@ body {
   }
 
   .tile-container .tile{
-    width: 62px;
-    height: 62px;
+    width: 56px;
+    height: 56px;
     margin: 2px;
   }
 }
@@ -206,7 +211,7 @@ body {
   
   .key-container button {
     width: 26px;
-    height: 58px;
+    height: 40px;
     margin: 2px;
   }
   
@@ -219,8 +224,8 @@ body {
   }
 
   .tile-container .tile{
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     margin: 2px;
   }
 }
@@ -241,7 +246,7 @@ body {
   
   .key-container button {
     width: 25px;
-    height: 58px;
+    height: 35px;
     margin: 2px;
   }
   
@@ -254,8 +259,8 @@ body {
   }
 
   .tile-container .tile{
-    width: 50px;
-    height: 50px;
+    width: 35px;
+    height: 35px;
     margin: 2px;
   }
 }

@@ -128,19 +128,19 @@ const checkRow = () => {
   if (currentTile > 4) {
     checkWord(guess);
     if (!find) {
-      showMessage('La palabra no esta en el diccionario');
+      showMessage('La palabra no esta en el diccionario', 0);
       return;
     } else {
       find = false;
       flipTile();
       if (wordle === guess) {
-        showMessage('Magnífico');
+        showMessage('Magnífico', 2500);
         isGameOver = true;
         return;
       } else {
         if (currentRow >= 5) {
           isGameOver = true;
-          showMessage('Game Over');
+          showMessage('Game Over', 2500);
           return;
         }
         if (currentRow < 5) {
@@ -152,13 +152,15 @@ const checkRow = () => {
   }
 }
 
-const showMessage = (message) => {
+const showMessage = (message, interval) => {
   const messageElement = document.createElement('p');
   messageElement.textContent = message;
-  messageDisplay.append(messageElement);
   setTimeout(() => {
-    messageDisplay.removeChild(messageElement);
-  }, 2000);
+    messageDisplay.append(messageElement);
+    setTimeout(() => {
+      messageDisplay.removeChild(messageElement);
+    }, 3000);
+  }, interval);
 }
 
 const addColorToKey = (keyLetter, color) => {
