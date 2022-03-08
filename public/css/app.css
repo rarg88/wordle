@@ -11315,7 +11315,7 @@ body {
 
 .tile-container {
   width: 330px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11357,7 +11357,7 @@ body {
 }
 
 .message-container {
-  min-height: 30px;
+  min-height: 10px;
   width: 100%;
   z-index: 9999;
 }
@@ -11551,4 +11551,15 @@ body {
     height: 35px;
     margin: 2px;
   }
+}
+.mw-50px {
+  max-width: 50px;
+}
+
+.mw-100px {
+  max-width: 100px;
+}
+
+.margin-0 {
+  margin: 0;
 }
