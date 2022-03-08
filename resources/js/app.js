@@ -149,6 +149,8 @@ const checkRow = () => {
         }
       }
     }
+  } else {
+    showMessage('No hay suficientes letras para una palabra', 0);
   }
 }
 
