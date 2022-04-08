@@ -278,7 +278,6 @@ const finishGame = () => {
   const shareData = {
     title: 'Wordle',
     text: resultText,
-    url: 'https://wordle.s3ways.es'
   }
   const game = document.querySelector('.game-container');
   while (game.firstChild) {
