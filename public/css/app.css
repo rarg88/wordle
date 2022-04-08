@@ -11563,3 +11563,7 @@ body {
 .margin-0 {
   margin: 0;
 }
+
+.text-white {
+  color: white;
+}

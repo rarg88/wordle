@@ -21,6 +21,7 @@ Auth::routes();
 
 Route::get('/wordle', [App\Http\Controllers\WordleController::class, 'wordle'])->name('wordle');
 
+Route::post('/save-result', [App\Http\Controllers\ResultController::class, 'save'])->name('save-result');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
