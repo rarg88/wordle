@@ -2,6 +2,8 @@ const { add } = require('lodash');
 
 require('./bootstrap');
 
+$('#instrucciones').modal('show');
+
 let wordle;
 let wordleResult;
 
